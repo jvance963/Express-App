@@ -1,0 +1,24 @@
+{
+  "name": "express-app",
+  "version": "1.0.0",
+  "description": "First Indivisdual Express APP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvance963/Express-App.git"
+  },
+  "author": "JOSHUA VANCE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jvance963/Express-App/issues"
+  },
+  "homepage": "https://github.com/jvance963/Express-App#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "hbs": "^4.0.2"
+  }
+}
