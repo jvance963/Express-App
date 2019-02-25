@@ -1,14 +1,15 @@
 const express = require("express");
 const app = express();
-const handlebars = require("hbs");
+const hbs = require("hbs");
 const bodyParser = require("body-Parser");
+const route = require("./routes/index.js");
+const methodOverride = require("method-override");
 
 app.set("view engine", "hbs");
+app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.render("index", { title: "Homepage" });
 });
 
-app.use(require("./routes/index.js"));
-
-app.listen(3009, () => console.log("listening on port 3009"));
+app.listen(3010, () => console.log("listening on port 3010"));
