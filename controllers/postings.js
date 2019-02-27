@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-var Postings = mongoose.model("response");
+var Postings = mongoose.model("postings");
 
 var PostingsController = {
   getPostings: function(req, res) {
@@ -25,7 +25,7 @@ var PostingsController = {
   editPostings: function(req, res) {
     Postings.findOneAndUpdate({ _id: req.params.id }, req.body).exec(function(
       err,
-      user
+      postings
     ) {
       if (err) {
         console.log("Error:", err);

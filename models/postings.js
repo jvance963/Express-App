@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 
-var PostingSchema = new mongoose.Schema(
+PostingSchema = new mongoose.Schema(
   {
     title: String,
     content: String,
