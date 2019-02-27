@@ -1,4 +1,4 @@
-const Postings = require("../models/user");
+const User = require("../models/user");
 
 var UserController = {
   getUser: function(req, res) {
@@ -11,8 +11,8 @@ var UserController = {
     });
   },
   createUser: function(req, res) {
-    var user = new User(req.body);
-    User.save(function(err, user) {
+    var User = new User(req.body);
+    user.save(function(err, user) {
       if (err) {
         console.log("Error:", err);
       } else {
@@ -45,3 +45,9 @@ var UserController = {
 };
 
 module.exports = UserController;
+
+// module.exports = {
+//   getUser: (req, res) => {
+//     res.send("get user is working");
+//   }
+// };

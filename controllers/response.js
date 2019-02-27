@@ -1,4 +1,4 @@
-const Postings = require("../models/response");
+const Response = require("../models/response");
 
 var ResponseController = {
   getResponse: function(req, res) {
