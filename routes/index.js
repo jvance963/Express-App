@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const { Post } = require("../models/post");
+const { Post } = require("../model/post");
 
 router.get("/", function(req, res) {
   Post.find({})
     .sort({ priority: "asc" })
-    .then(items => {
-      res.render("post", { items, success: req.flash("success") });
+    .then(post => {
+      res.render("post", { post, success: req.flash("success") });
     });
 });
 
