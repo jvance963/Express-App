@@ -24,4 +24,8 @@ app.use("./routes/index", (req, res) => {
   res.render("index");
 });
 
+app.use("./routes/post", (req, res) => {
+  res.render("post");
+});
+
 app.listen(4000, () => console.log("listening on port 4000"));
