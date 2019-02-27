@@ -1,6 +1,6 @@
-var mongoose = require("mongoose");
+const mongoose = require("../db/connection");
 
-var UserSchema = new mongoose.Schema(
+UserSchema = new mongoose.Schema(
   {
     email: {
       type: String,

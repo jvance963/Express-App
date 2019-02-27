@@ -1,4 +1,4 @@
-var mongoose = require("mongoose");
+const mongoose = require("../db/connection");
 
 var ResponseSchema = new mongoose.Schema(
   {

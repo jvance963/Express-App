@@ -6,7 +6,7 @@ router.get("/user/:id", user.getUser);
 
 router.post("/user", user.createUser);
 
-router.put("/user/:id", user.updateUser);
+router.put("/user/:id", user.editUser);
 
 router.delete("/user/:id", user.deleteUser);
 

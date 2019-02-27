@@ -1,5 +1,4 @@
-var mongoose = require("mongoose");
-var Postings = mongoose.model("postings");
+const Postings = require("../models/postings");
 
 var PostingsController = {
   getPostings: function(req, res) {
