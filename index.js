@@ -4,7 +4,6 @@ const parser = require("body-parser");
 const methodOverride = require("method-override");
 
 app.set("view engine", "hbs");
-app.set("view engine", "hbs");
 app.use(parser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
@@ -20,12 +19,14 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/post", (req, res) => {
-  res.render("post");
-});
+app.use(require("./routes/index"));
 
-app.get("/response", (req, res) => {
-  res.render("response");
-});
+// app.get("/post", (req, res) => {
+//   res.render("post");
+// });
 
-app.listen(4000, () => console.log("listening on port 4000"));
+// app.get("/response", (req, res) => {
+//   res.render("response");
+// });
+
+app.listen(4005, () => console.log("listening on port 4005"));
