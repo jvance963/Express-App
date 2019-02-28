@@ -24,4 +24,8 @@ app.get("/post", (req, res) => {
   res.render("post");
 });
 
+app.get("/response", (req, res) => {
+  res.render("response");
+});
+
 app.listen(4000, () => console.log("listening on port 4000"));
