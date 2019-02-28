@@ -20,4 +20,8 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get("/post", (req, res) => {
+  res.render("post");
+});
+
 app.listen(4000, () => console.log("listening on port 4000"));

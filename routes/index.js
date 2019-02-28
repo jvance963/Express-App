@@ -6,7 +6,7 @@ router.get("/", function(req, res) {
   Post.find({})
     .sort({ priority: "asc" })
     .then(post => {
-      res.render("post", { post, success: req.flash("success") });
+      res.render("post", { items, success: req.flash("success") });
     });
 });
 

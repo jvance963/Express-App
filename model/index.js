@@ -1,6 +1,6 @@
-const mongoose = require("../db/connection");
+const mongoose = require("../db/connection.js");
 
 module.exports = {
-  Response: mongoose.model("response", require("./item")),
-  Post: mongoose.model("Post", require("./Post"))
+  Response: mongoose.model("response", require("./response")),
+  Post: mongoose.model("post", require("./post"))
 };
