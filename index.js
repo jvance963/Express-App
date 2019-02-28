@@ -21,12 +21,4 @@ app.get("/", (req, res) => {
 
 app.use(require("./routes/index"));
 
-// app.get("/post", (req, res) => {
-//   res.render("post");
-// });
-
-// app.get("/response", (req, res) => {
-//   res.render("response");
-// });
-
 app.listen(4005, () => console.log("listening on port 4005"));
