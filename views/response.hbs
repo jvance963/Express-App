@@ -1,12 +1,24 @@
-<div class="card">
-    <div class="card-content">
-        <a class="card-title" href="/tweet/{{id}}">
-            {{ content }}
-        </a>
+<h2>Create a new Job</h2>
+
+<form action="/post" method="post">
+    <p class="form-group">
+        <label for="name">Task Responding To:</label>
+        <input type="text" name="name" id="name" class="form-control">
+    </p>
+    <p class="form-group">
+        <label for="description">Soonest Available:</label>
+    </p>
+    <div class="form-row mb-3">
+        <div class="col">
+            <label for="status">Status:</label>
+            <input type="text" name="status" id="status" class="form-control">
+        </div>
+        <div class="col">
+            <label for="priority">Priority Level:</label>
+            <input type="text" name="priority" id="priority" class="form-control">
+        </div>
     </div>
-    <div class="card-action">
-        <a href="/user/{{ author.id }}" class="">{{ author.local.email }}</a>
-        <span class="tweet__date">{{ createdAt }}</span>
-        <span class="tweet_comments">{{ comments.length }} Comments</span>
-    </div>
-</div>
+    <p class="form-group">
+        <input type="submit" value="Submit for Hand-E Jobber" class="btn btn-primary">
+    </p>
+</form>

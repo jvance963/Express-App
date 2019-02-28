@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const Comment = new Schema({
+const Response = new Schema({
   content: String,
   createdAt: {
     type: Date,
@@ -9,7 +9,7 @@ const Comment = new Schema({
   },
   author: {
     type: Schema.Types.ObjectId,
-    ref: "User"
+    ref: "Jobber"
   }
 });
 
@@ -29,7 +29,8 @@ const PostSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "User"
   },
-  comments: [Comment]
+  response: [Response]
 });
 
 module.exports = PostSchema;
+module.exports = Response;
