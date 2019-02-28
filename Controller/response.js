@@ -4,19 +4,22 @@ module.exports = {
   new: function(req, res) {
     res.render("response/new");
   },
+
+  //come back to this code....may have an easier way
   create: function(req, res) {
-    const { name, priority, status } = req.body;
+    const { response, availability, date, time } = req.body;
     Response.create({
-      name,
-      priority,
-      status
+      response,
+      availability,
+      date,
+      time
     }).then(response => {
-      res.redirect(`/post/${response._id}`);
+      res.redirect(`/response/${response._id}`);
     });
   },
   show: function(req, res) {
     response.findById(req.params.id).then(response => {
-      res.redirect("post/show", { response });
+      res.redirect("response/show", { response });
     });
   },
 
@@ -29,7 +32,7 @@ module.exports = {
         author: String
       });
       response.save(err => {
-        res.redirect(`/post/${post._id}`);
+        res.redirect(`/response/${response._id}`);
       });
     });
   }
