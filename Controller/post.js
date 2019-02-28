@@ -25,9 +25,19 @@ module.exports = {
       res.render("post/edit", { post });
     });
   },
-  update: function(req, res) {
-    console.log(req.body);
-    const { name, description, status, priority } = req.body;
+
+  // May need to come back to this code later
+  update: (req, res) => {
+    let { content } = req.body;
+    Post.findOne({ _id: req.params.id }).then(post => {
+      post.response.push({
+        content,
+        author: req.user._id
+      });
+      post.save(err => {
+        res.redirect(`/post/${post._id}`);
+      });
+    });
 
     Post.findOneAndUpdate(
       req.params.id,
