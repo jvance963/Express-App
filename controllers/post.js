@@ -19,6 +19,7 @@ module.exports = {
       priority,
       status
     }).then(post => {
+      // need to take the ${post._id} out
       res.redirect(`/post/${post._id}`);
     });
   },

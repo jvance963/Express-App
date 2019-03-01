@@ -21,4 +21,8 @@ app.get("/", (req, res) => {
 
 app.use(require("./routes/index"));
 
-app.listen(4005, () => console.log("listening on port 4005"));
+app.set("port", process.env.PORT || 4005);
+
+app.listen(app.get("port"), () => {
+  console.log(`✅ PORT: ${app.get("port")} 🌟`);
+});

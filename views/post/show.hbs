@@ -1,16 +1,32 @@
-<div class="card">
-    <div class="card-body">
-        <p>Name: {{posts.name}}</p>
-        <p>Description: {{posts.description}}</p>
-        <p>Priority: {{posts.priority}}</p>
-        <p>Status: {{posts.status}}</p>
+<div class="w3-container w3-red w3-center" style="padding:100px 16px">
+    <h2>Edit Your Hand eJob</h2>
+</div>
+
+<div class="w3-top">
+    <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+        <href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="/" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Homepage</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Signup</a>
     </div>
+
+
+</div>
+
+<div class="card-body">
+    <p>Name: {{posts.name}}</p>
+    <p>Description: {{posts.description}}</p>
+    <p>Priority: {{posts.priority}}</p>
+    <p>Status: {{posts.status}}</p>
+</div>
+<div class="w3-red w3-center" style="padding:100px 16px">
+
     <div class="card-footer">
         <a href="/post/{{post.id}}/edit" class="btn btn-warning text-white">Edit</a>
 
         <form action="/post/{{post.id}}?_method=DELETE" method="post" class="d-inline">
             <input type="submit" value="Delete" class="btn btn-danger">
-            <a href="/post/{{post.id}}/edit" class="btn btn-success text-white">Create Another Hand eJob</a>
+            <a href="/post" class="btn btn-success text-white">Create Another Hand eJob</a>
         </form>
     </div>
 </div>

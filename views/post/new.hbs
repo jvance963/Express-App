@@ -1,15 +1,25 @@
 <div class="w3-container w3-red w3-center" style="padding:100px 16px">
-    <h1 class="w3-margin w3-jumbo" style="padding: auto">Describe Your Task</h1>
+    <h1 class="w3-margin w3-jumbo" style="padding: auto">Your Hand eJob</h1>
+
+    <div class="w3-top">
+        <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+            <href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                    class="fa fa-bars"></i></a>
+                <a href="/" class="w3-button w3-hide-small w3-padding-large w3-hover-white">Homepage</a>
+                <a href="#" class="w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
+                <a href="#" class="w3-button w3-hide-small w3-padding-large w3-hover-white">Signup</a>
+        </div>
+    </div>
 
     {{!-- Ask about the below --}}
     <form action="/post" method="post">
         <p class="form-group">
-            <label for="name">Task:</label>
+            <label for="name">What Kind of Job:</label>
             <input type="text" name="name" id="name" class="form-control">
         </p>
         <p class="form-group">
-            <label for="description">Summary of Task:</label>
-            <textarea name="description" id="" cols="30" rows="10" class="form-control"></textarea>
+            <label for="description">Summary of Job:</label>
+            <textarea name="description" id="name" cols="30" rows="10" class="form-control"></textarea>
         </p>
         <div class="form-row mb-3">
             <div class="col">
@@ -23,7 +33,8 @@
             </div>
         </div>
         <p class="form-group">
-            <input type="submit" value="Submit Job" class="btn btn-primary">
+            <input type="submit" value="Submit" class="btn btn-primary">
+            <a href="/post" class="btn btn-success text-white">Submit</a>
         </p>
     </form>
 

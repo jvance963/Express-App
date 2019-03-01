@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const postController = require("../controllers/response");
+const ResponseController = require("../controllers/response");
 
 router.get("/", responseController.index);
 router.get("/new", responseController.new);
