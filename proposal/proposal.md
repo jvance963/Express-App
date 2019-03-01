@@ -9,16 +9,16 @@
 <h2> CRUD Functionality </h2>
 
 <ul>
-CREATE User
-CREATE Job
-CREATE Handyman
-CREATE Response from Handyman
-READ All Responses from Handyman
-READ Job
-UPDATE Response from Handyman
-UPDATE Job
-DELETE Job
-DELETE User
+<li>CREATE User</li>
+<li>CREATE Job</li>
+<li>CREATE Handyman</li>
+<li>CREATE Response from Handyman</li>
+<li>READ All Responses from Handyman</li>
+<li>READ Job</li>
+<li>UPDATE Response from Handyman</li>
+<li>UPDATE Job</li>
+<li>DELETE Job</li>
+<li>DELETE User</li>
 
 </ul>
 
@@ -26,19 +26,20 @@ DELETE User
 
 <p> I am going to be building 4 models for this application. They will be for the
 
-<li>
-- "user",
-  - login
-  - Sign-up
-- "job",
-  - Create
-  - Edit
-  - Delete
-- "response"
-  - New
-  - Edit
-  - Delete
-</li>
+<ul>
+<li>user</li>
+<li>login</li>
+<li>Sign-up</li>
+</ul>
+<ul>job</ul>
+<li>Create</li>
+<li>Edit</li>
+<li>Delete</li>
+<ul>response</li>
+<li>New</li>
+<li>Edit</li>
+<li>Delete</li>
+</ul>
 
 <h2> CONSIDERATIONS </h2>
 
@@ -50,4 +51,4 @@ DELETE User
 
 <h2>REACH</h2>
 
-I am going to want to create a user, a "jobber" (to respond to the job). I will also want to create a signup page and I think that is it for now.
+<p>I am going to want to create a user, a "jobber" (to respond to the job). I will also want to create a signup page and I think that is it for now.</p>
