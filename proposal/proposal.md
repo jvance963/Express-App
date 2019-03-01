@@ -31,11 +31,12 @@
 <li>login</li>
 <li>Sign-up</li>
 </ul>
-<ul>job</ul>
+<ul>job
 <li>Create</li>
 <li>Edit</li>
 <li>Delete</li>
-<ul>response</li>
+</ul>
+<ul>response
 <li>New</li>
 <li>Edit</li>
 <li>Delete</li>
