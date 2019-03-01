@@ -26,21 +26,17 @@
 
 <p> I am going to be building 4 models for this application. They will be for the
 
-<ul>
-<li>user</li>
+<ul>user</ul>
 <li>login</li>
 <li>Sign-up</li>
-</ul>
-<ul>job
+<ul>job</ul>
 <li>Create</li>
 <li>Edit</li>
 <li>Delete</li>
-</ul>
-<ul>response
+<ul>response</ul>
 <li>New</li>
 <li>Edit</li>
 <li>Delete</li>
-</ul>
 
 <h2> CONSIDERATIONS </h2>
 
