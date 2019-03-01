@@ -12,13 +12,14 @@ module.exports = {
   },
   create: function(req, res) {
     const { name, description, priority, status } = req.body;
+    console.log(req.body);
     Post.create({
       name,
       description,
       priority,
       status
     }).then(post => {
-      res.redirect(`/post${post._id}`);
+      res.redirect(`/post/${post._id}`);
     });
   },
   show: function(req, res) {
@@ -27,8 +28,8 @@ module.exports = {
     });
   },
   edit: function(req, res) {
-    post.findById(req.params.id).then(post => {
-      res.render("post/edit", { post });
+    post.findById(req.params.id).then(posts => {
+      res.render("post/edit", { posts });
     });
   },
   update: function(req, res) {

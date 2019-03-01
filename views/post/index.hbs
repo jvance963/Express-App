@@ -1,20 +1,21 @@
-{{!-- <div class="w3-container w3-red w3-center" style="padding:100px 16px">
+<div class="w3-container w3-red w3-center" style="padding:100px 16px">
     <h1 class="w3-margin w3-jumbo" style="padding: auto">Request New Hand eTask</h1>
 
-    {{#each posts}} --}}
-{{!-- <p>Task: {{name}}</p>
+    {{#each posts}}
+    <p>Task: {{name}}</p>
     <p>Description: {{description}}</p>
     <p>Status: {{status}}</p>
-    <p>Priority Level: {{priority}}</p> --}}
+    <p>Priority Level: {{priority}}</p>
+    {{/each}}
 
-{{!-- <form action="post" method="post">
+    <form action="post" method="post">
         <p class="form-group">
             <label for="name">Task:</label>
             <input type="text" name="name" id="name" class="form-control">
         </p>
         <p class="form-group">
             <label for="description">Summary of Task:</label>
-            <textarea name="description" id="" cols="30" rows="10" class="form-control"></textarea>
+            <textarea name="description" id="" cols="10" rows="10" class="form-control"></textarea>
         </p>
         <div class="form-row mb-3">
             <div class="col">
@@ -32,5 +33,4 @@
         </p>
     </form>
 
-    {{/each}}
-</div> --}}
+</div>
