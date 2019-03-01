@@ -1,15 +1,17 @@
 <div class="card">
     <div class="card-body">
-        <h4 class="card-title">{{post.name}}</h4>
-        <p class="card-text">{{post.description}}</p>
-        <p>Priority: {{post.priority}}</p>
-        <p>Status: {{post.status}}</p>
+        <p>Name: {{posts.name}}</p>
+        <p>Description: {{posts.description}}</p>
+        <p>Priority: {{posts.priority}}</p>
+        <p>Status: {{posts.status}}</p>
     </div>
     <div class="card-footer">
         <a href="/post/{{post.id}}/edit" class="btn btn-warning text-white">Edit</a>
 
         <form action="/post/{{post.id}}?_method=DELETE" method="post" class="d-inline">
             <input type="submit" value="Delete" class="btn btn-danger">
+            <a href="/post/{{post.id}}/edit" class="btn btn-success text-white">Create Another Hand eJob</a>
         </form>
     </div>
+</div>
 </div>
