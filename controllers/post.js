@@ -59,7 +59,7 @@ module.exports = {
   delete: function(req, res) {
     Post.remove({ _id: req.params.id }).then(post => {
       console.log(post);
-      res.redirect("/");
+      res.redirect("/post");
     });
   }
 };

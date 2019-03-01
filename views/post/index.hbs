@@ -16,6 +16,20 @@
     <p>Description: {{description}}</p>
     <p>Status: {{status}}</p>
     <p>Priority Level: {{priority}}</p>
+
+    <div class="w3-red w3-center" style="padding:100px 16px">
+        <div class="card-footer">
+            <form action="/post/{{_id}}?_method=PUT" method="post" class="d-inline">
+                <input type="submit" value="Edit" class="btn btn-success">
+            </form>
+            <form action="/post/{{_id}}?_method=DELETE" method="post" class="d-inline">
+                <input type="submit" value="Delete" class="btn btn-danger">
+            </form>
+
+        </div>
+    </div>
+
+
     {{/each}}
 </div>
 
@@ -28,12 +42,12 @@
 <div class="w3-red w3-center" style="padding:100px 16px">
 
     <div class="card-footer">
-        <a href="/post/{{post.id}}t" class="btn btn-warning text-white">Edit</a>
+        {{!-- <a href="/post/{{post.id}}t" class="btn btn-warning text-white">Edit</a>
 
         <form action="/post/{{post.id}}?_method=DELETE" method="post" class="d-inline">
             <input type="submit" value="Delete" class="btn btn-danger">
-            <a href="/post" class="btn btn-success text-white">Create Another Hand eJob</a>
-        </form>
+        </form> --}}
+        <a href="/post" class="btn btn-success text-white">Create Another Hand eJob</a>
     </div>
 </div>
 </div>
