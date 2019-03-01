@@ -26,7 +26,7 @@ DELETE User
 
 <p> I am going to be building 4 models for this application. They will be for the
 
-<ul>
+<li>
 - "user",
   - login
   - Sign-up
@@ -38,7 +38,7 @@ DELETE User
   - New
   - Edit
   - Delete
-</ul>
+</li>
 
 <h2> CONSIDERATIONS </h2>
 
