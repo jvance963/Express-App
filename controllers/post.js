@@ -28,7 +28,7 @@ module.exports = {
     });
   },
   edit: function(req, res) {
-    post.findById(req.params.id).then(posts => {
+    Post.findById(req.params.id).then(posts => {
       res.render("post/edit", { posts });
     });
   },

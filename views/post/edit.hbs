@@ -1,5 +1,6 @@
-<h2>Edit to do</h2>
+{{!-- <h2>Edit to do</h2>
 
+{{#if post}}
 {{#each post}}
 
 <form action="/post/{{post.id}}?_method=PUT" method="post">
@@ -25,3 +26,35 @@
         <input type="submit" value="Save" class="btn btn-primary">
     </p>
 </form>
+{{/else}} --}}
+
+<h2 class="mb-3">Items:</h2>
+
+{{#if posts}}
+{{#each posts}}
+<div class="card">
+    <div class="card-content">
+        <span class="card-title">
+            {{ content }}
+        </span>
+    </div>
+</div>
+{{/each}}
+{{/if}}
+
+{{#if currentResponse}}
+<div class="card">
+    <div class="card-content">
+        <h4 class="card-title">Add a response:</h6>
+            <form method="POST" action="/post/{{id}}?_method=PUT" class="row">
+                <p class="input-field inline col s10">
+                    <label for="content"></label>
+                    <input type="text" name="content" id="">
+                </p>
+                <p class="input-field inline col s2">
+                    <input class="btn" type="submit" value="Submit">
+                </p>
+            </form>
+    </div>
+</div>
+{{/if }}
