@@ -1,7 +1,8 @@
-<h1 class="w3-margin w3-jumbo" style="padding: auto">Request New Hand eTask</h1>
+<div class="w3-container w3-red w3-center" style="padding:100px 16px">
+    <h1 class="w3-margin w3-jumbo" style="padding: auto">Request New Hand eTask</h1>
 
 
-{{!-- <div class="w3-top">
+    {{!-- <div class="w3-top">
         <div class="w3-bar w3-red w3-card w3-left-align w3-large">
             <href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
                     class="fa fa-bars"></i></a>
@@ -9,31 +10,27 @@
                 <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
                 <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Signup</a>
         </div> --}}
-<div class="card-body"></div>
-{{#each posts}}
-<p>Task: {{name}}</p>
-<p>Description: {{description}}</p>
-<p>Status: {{status}}</p>
-<p>Priority Level: {{priority}}</p>
-
-<form action="/post/{{_id.edit}}?_method=UPDATE" method="post" class="d-inline">
-    <input type="submit" value="Edit" class="btn btn-warning">
-</form>
-<form action="/post/{{_id}}?_method=DELETE" method="post" class="d-inline">
-    <input type="submit" value="Delete" class="btn btn-danger">
-</form>
-<form action="/post/new?_method=PUT" method="post" class="d-inline">
-    <input type="submit" value="Response" class="btn btn-success">
-</form>
-
-</div>
-</div>
-
-
-{{/each}}
-</div>
-
-{{!-- <div class="card-body">
+    <div>
+        {{#each posts}}
+        <p>Task: {{name}}</p>
+        <p>Description: {{description}}</p>
+        <p>Status: {{status}}</p>
+        <p>Priority Level: {{priority}}</p>
+        <br>
+        <form action="/post/{{_id.edit}}?_method=UPDATE" method="post" class="d-inline">
+            <input type="submit" value="Edit" class="btn btn-warning">
+        </form>
+        <form action="/post/{{_id}}?_method=DELETE" method="post" class="d-inline">
+            <input type="submit" value="Delete" class="btn btn-danger">
+        </form>
+        <form action="/post/new?_method=PUT" method="post" class="d-inline">
+            <input type="submit" value="Response" class="btn btn-success">
+        </form>
+        {{/each}}
+        <div class="w3-container w3-red w3-center" style="padding:100px 16px">
+            <a href="/post" class="btn btn-success text-white">Create Another Hand eJob</a>
+        </div>
+        {{!-- <div class="card-body">
     <p>Name: {{post.name}}</p>
     <p>Description: {{posts.description}}</p>
     <p>Priority: {{posts.priority}}</p>
@@ -41,14 +38,8 @@
 </div> --}}
 
 
-{{!-- <a href="/post/{{post.id}}t" class="btn btn-warning text-white">Edit</a>
+        {{!-- <a href="/post/{{post.id}}t" class="btn btn-warning text-white">Edit</a>
 
         <form action="/post/{{post.id}}?_method=DELETE" method="post" class="d-inline">
             <input type="submit" value="Delete" class="btn btn-danger">
         </form> --}}
-<a href="/post" class="btn btn-success text-white">Create Another Hand eJob</a>
-</div>
-</div>
-</div>
-
-</div>
