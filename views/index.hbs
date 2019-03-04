@@ -1,14 +1,34 @@
-<div class="w3-top">
-    <div class="w3-bar w3-red w3-card w3-left-align w3-large">
-        <href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-            <a href="/post/new" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Book A
-                Task</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Signup</a>
-    </div>
+<h2 class="mb-6">Request for Hand eJob</h2>
 
-    <div class="w3-container w3-red w3-center" style="padding:225px 16px">
-        <h1 class="w3-margin w3-jumbo W3-red">HAND eJOBS</h1>
-        <p class="w3-xlarge">PROFESSIONAL HAND'S TO GET YOUR JOB DONE</p>
-        <a href="/post/new" class="btn btn-success">BOOK YOUR NEXT JOB</a>
+<form class="example" action="/post/new">
+    <input type="text" placeholder="Type in your new Hand eJob, e.g. Laundry Help..." name="search" size="100">
+</form>
+<br>
+</form>
+
+{{#if Post}}
+<div class="card-deck">
+    {{#each Post }}
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <p class="card-text">{{description}}</p>
+        </div>
+        <div class="card-footer">
+            <a href="/post/{{id}}" class="card-link">View More</a>
+        </div>
     </div>
+    {{/each}}
+</div>
+{{/if}}
+
+<form class="" <br>
+    <div class="card-deck mt-5">
+        <div class="card">
+            <div class="card-body">
+                <a href="/post/new" class="btn btn-success">Add a new Hand eJob</a>
+            </div>
+        </div>
+    </div>
+    </div>
+</form>

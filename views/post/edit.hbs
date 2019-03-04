@@ -1,27 +1,25 @@
-<div class="w3-container w3-red w3-center" style="padding:115px 20px">
-    <h1 class="w3-margin w3-x-large" style="padding: auto">Edit Your Hand eTask</h1>
+<h2>Edit Hand eJob</h2>
 
-    <form action="/post/{{post.id}}?_method=UPDATE" method="post">
-        <p class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name" value="{{post.name}}" class="form-control">
-        </p>
-        <p class="form-group">
-            <label for="description">Description:</label>
-            <textarea name="description" id="name" cols="75" rows="5"
-                class="form-control">{{post.description}}</textarea>
-        </p>
-        <div class="form-row mb-3">
-            <div class="col">
-                <label for="status">Status:</label>
-                <input type="text" name="status" id="status" class="form-control" value="{{post.status}}">
-            </div>
-            <div class="col">
-                <label for="priority">Priority:</label>
-                <input type="text" name="priority" id="priority" class="form-control" value="{{post.priority}}">
-            </div>
+<form action="/post/{{post.id}}?_method=PUT" method="post">
+    <p class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="{{post.name}}" class="form-control">
+    </p>
+    <p class="form-group">
+        <label for="description">Description:</label>
+        <textarea name="description" id="" cols="30" rows="10" class="form-control">{{post.description}}</textarea>
+    </p>
+    <div class="form-row mb-3">
+        <div class="col">
+            <label for="status">Status:</label>
+            <input type="text" name="status" id="status" class="form-control" value="{{post.status}}">
         </div>
-        <p class="form-group">
-            <input type="submit" value="Save" class="btn btn-primary">
-        </p>
-    </form>
+        <div class="col">
+            <label for="priority">Priority:</label>
+            <input type="text" name="priority" id="priority" class="form-control" value="{{post.priority}}">
+        </div>
+    </div>
+    <p class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary">
+    </p>
+</form>
