@@ -22,15 +22,17 @@ module.exports = {
     });
   },
   show: function(req, res) {
-    response.findById(req.params.id).then(response => {
-      res.redirect("post/show", { response });
-    });
+    // Response.findById(req.params._id).then(response => {
+    //   res.redirect("post/show", { response });
+    // });
+
+    res.render("post/response");
   },
 
   // May need to come back to this code later
   update: (req, res) => {
     let { content } = req.body;
-    response.findOne({ _id: req.params.id }).then(response => {
+    Response.findOne({ _id: req.params.id }).then(response => {
       response.push({
         content,
         author: String

@@ -1,8 +1,8 @@
 <div class="card">
     <div class="card-body">
-        <h4 class="card-title">{{post.name}}</h4>
-        <p class="card-text">{{post.description}}</p>
-        <p>Priority: {{post.priority}}</p>
+        <h4 class="card-title">Name{{post.name}}</h4>
+        <p class="card-text">Description{{post.description}}</p>
+        <p>Priority: {{post.body.priority}}</p>
         <p>Status: {{post.status}}</p>
     </div>
     <div class="card-footer">
@@ -11,7 +11,7 @@
         <form action="/post/{{post.id}}?_method=DELETE" method="post" class="d-inline">
             <input type="submit" value="Delete" class="btn btn-danger">
 
-            <a href="/post/{{post.id}}" class="btn btn-success text-white">Response</a>
+            <a href="/response/{{post.id}}" class="btn btn-success text-white">Response</a>
 
         </form>
     </div>

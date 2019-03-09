@@ -2,10 +2,15 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const ResponseSchema = new Schema({
-  content: String,
-  createdAt: {
+  response: String,
+  availability: {
     type: Date,
-    default: Date.now()
+    default: Date.now(),
+    createdAt: {
+      type: Date,
+      default: Date.now(),
+      complete: String
+    }
   }
 });
 
