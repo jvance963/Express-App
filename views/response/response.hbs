@@ -2,11 +2,11 @@
     <div class="card-body">
         <h4 class="card-title"> Response{{ response.response }}</h4>
         <p class="card-text"> Availability{{ response.availability }}</p>
-        <p>Priority: {{ reponse.createdAt }}</p>
+        <p>Created At: {{ reponse.createdAt }}</p>
         <p>Status: {{ reponse.complete }}</p>
     </div>
     <div class="card-footer">
-        <a href="/response/{{response.id}}/edit" class="btn btn-warning text-white">Edit Response</a>
+        <a href="/response/{{response.id}}/create" class="btn btn-warning text-white">Edit Response</a>
 
         <a href="/response/{{response.id}}" class="btn btn-success text-white">Status</a>
 

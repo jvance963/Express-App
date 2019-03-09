@@ -4,7 +4,7 @@ module.exports = {
   index: function(req, res) {
     response.find({}).then(responses => {
       console.log(responses);
-      res.render("response/index", { responses });
+      res.render("/index", { responses });
     });
   },
   new: function(req, res) {
@@ -18,7 +18,7 @@ module.exports = {
       date,
       time
     }).then(response => {
-      res.redirect(`/response/${response._id}`);
+      res.redirect(`/response`);
     });
   },
   show: function(req, res) {
@@ -26,7 +26,7 @@ module.exports = {
     //   res.redirect("post/show", { response });
     // });
 
-    res.render("post/response");
+    res.render("response/response");
   },
 
   // May need to come back to this code later
