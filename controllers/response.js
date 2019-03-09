@@ -10,8 +10,6 @@ module.exports = {
   new: function(req, res) {
     res.render("response/new");
   },
-
-  //come back to this code....may have an easier way
   create: function(req, res) {
     const { response, availability, date, time } = req.body;
     Response.create({
@@ -25,7 +23,7 @@ module.exports = {
   },
   show: function(req, res) {
     response.findById(req.params.id).then(response => {
-      res.redirect("response/show", { response });
+      res.redirect("post/show", { response });
     });
   },
 

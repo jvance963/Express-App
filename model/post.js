@@ -16,9 +16,7 @@ const PostSchema = new Schema({
     type: String
   },
   priority: {
-    type: Number,
-    min: 0,
-    max: 5
+    type: String
   },
   responses: [ResponseSchema]
 });

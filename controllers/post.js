@@ -4,7 +4,7 @@ module.exports = {
   index: function(req, res) {
     Post.find({}).then(posts => {
       console.log(posts);
-      res.render("post/index", { posts });
+      res.render("index", { posts });
     });
   },
   new: function(req, res) {
@@ -20,7 +20,7 @@ module.exports = {
       status
     }).then(post => {
       // need to take the ${post._id} out
-      res.redirect(`/post/${post._id}`);
+      res.redirect("/post");
     });
   },
   show: function(req, res) {
