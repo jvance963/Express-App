@@ -11,13 +11,14 @@ module.exports = {
     res.render("post/new");
   },
   create: function(req, res) {
-    const { name, description, priority, status } = req.body;
+    const { name, description, priority, status, instructions } = req.body;
     console.log(req.body);
     Post.create({
       name,
       description,
       priority,
-      status
+      status,
+      instructions
     }).then(post => {
       // need to take the ${post._id} out
       res.redirect("/post");
@@ -35,7 +36,7 @@ module.exports = {
   },
   update: function(req, res) {
     console.log(req.body);
-    const { name, description, status, priority } = req.body;
+    const { name, description, status, priority, instructions } = req.body;
 
     Post.findOneAndUpdate(
       {
@@ -45,7 +46,8 @@ module.exports = {
         name,
         description,
         status,
-        priority
+        priority,
+        instructions
       },
       {
         runValidators: true
