@@ -22,14 +22,8 @@ module.exports = {
     });
   },
   show: function(req, res) {
-    // Response.findById(req.params._id).then(response => {
-    //   res.redirect("post/show", { response });
-    // });
-
     res.render("response/response");
   },
-
-  // May need to come back to this code later
   update: (req, res) => {
     let { content } = req.body;
     Response.findOne({ _id: req.params.id }).then(response => {

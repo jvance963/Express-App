@@ -12,7 +12,6 @@ module.exports = {
   },
   create: function(req, res) {
     const { name, description, priority, status, instructions } = req.body;
-    console.log(req.body);
     Post.create({
       name,
       description,
@@ -20,8 +19,7 @@ module.exports = {
       status,
       instructions
     }).then(post => {
-      // need to take the ${post._id} out
-      res.redirect("/post");
+      res.redirect(`/post/${post._id}`);
     });
   },
   show: function(req, res) {
@@ -35,30 +33,15 @@ module.exports = {
     });
   },
   update: function(req, res) {
-    console.log(req.body);
     const { name, description, status, priority, instructions } = req.body;
 
-    Post.findOneAndUpdate(
-      {
-        _id: req.params.id
-      },
-      {
-        name,
-        description,
-        status,
-        priority,
-        instructions
-      },
-      {
-        runValidators: true
-      }
-    )
-      .then(post => {
-        res.redirect(`/post`);
-      })
-      .catch(err => {
-        console.log(err);
-      });
+    Post.findOneAndUpdate(req.params.id, {
+      name,
+      description,
+      status,
+      priority,
+      instructions
+    });
   },
   delete: function(req, res) {
     Post.remove({ _id: req.params.id }).then(post => {
