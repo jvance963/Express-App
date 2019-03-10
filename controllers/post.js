@@ -38,7 +38,9 @@ module.exports = {
     const { name, description, status, priority } = req.body;
 
     Post.findOneAndUpdate(
-      req.params.id,
+      {
+        _id: req.params.id
+      },
       {
         name,
         description,
@@ -50,7 +52,7 @@ module.exports = {
       }
     )
       .then(post => {
-        res.redirect(`/post/${post._id}`);
+        res.redirect(`/post`);
       })
       .catch(err => {
         console.log(err);

@@ -1,9 +1,10 @@
 <div class="card">
     <div class="card-body">
-        <h4 class="card-title">Name{{post.name}}</h4>
-        <p class="card-text">Description{{post.description}}</p>
+        <p>Name{{post.body.name}}</p>
+        <p>Description{{post.body.description}}</p>
+        <p>Status: {{post.body.status}}</p>
         <p>Priority: {{post.body.priority}}</p>
-        <p>Status: {{post.status}}</p>
+        <p>Special Instructions: {{post.body.specialInstructions}}</p>
     </div>
     <div class="card-footer">
         <a href="/post/{{post.id}}/edit" class="btn btn-warning text-white">Edit</a>

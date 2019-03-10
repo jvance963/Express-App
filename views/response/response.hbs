@@ -1,15 +1,30 @@
 <div class="card">
     <div class="card-body">
-        <h4 class="card-title"> Response{{ response.response }}</h4>
-        <p class="card-text"> Availability{{ response.availability }}</p>
-        <p>Created At: {{ reponse.createdAt }}</p>
-        <p>Status: {{ reponse.complete }}</p>
+        <div class="form-group">
+            <label for="Response"></label>Response</label>
+            <input type="text" class="form-control" id="Job Priority" placeholder="Please type in your response...">
+        </div>
+        <div class="form-group">
+            <label for="Availabilty">Availability</label>
+            <input type="text" class="form-control" id="Availability" placeholder="Date and Time First Available...">
+        </div>
+        <p>Status</p>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Accepted</label>
+            <br>
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">In Progress</label>
+            <br>
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Complete</label>
+        </div>
+
+
     </div>
     <div class="card-footer">
-        <a href="/response/{{response.id}}/create" class="btn btn-warning text-white">Edit Response</a>
+        <a href="/response/{{response.id}}/post_id" class="btn btn-warning text-white">Send Response</a>
 
-        <a href="/response/{{response.id}}" class="btn btn-success text-white">Status</a>
-
-        </form>
     </div>
 </div>
+</form>
