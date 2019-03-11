@@ -19,7 +19,7 @@ module.exports = {
       status,
       instructions
     }).then(post => {
-      res.redirect(`/post/${post._id}`);
+      res.redirect(`/post`);
     });
   },
   show: function(req, res) {
