@@ -1,16 +1,18 @@
 <h2>Edit Hand eJob</h2>
 
-<form action="/post/{{post._id}}?_method=PUT" method="post">
+<form action="/post/{{post._id}}?_method=update" method="post">
     <div class="form-group">
         <label for="name">Name</label>
-        <input type="email" class="form-control" id="name">
+        <textarea class="form-control" id="name" name="name" cols="20" rows="1"
+            placeholder="Edit your Hand eJob"></textarea>
     </div>
     <div class="form-group">
         <label for="description">Description</label>
-        <textarea class="form-control" id="description" name="description" cols="30" rows="4"></textarea>
+        <textarea class="form-control" id="description" name="description" cols="30" rows="4"
+            placeholder="Edit the description of your Hand eJob"></textarea>
     </div>
     <div class="form-group">
-        <label for="exampleFormControlInput1">Status</label>
+        <label for="status">Status</label>
         <div class="form-check">
             <input type="checkbox" class="form-check-input" id="status">
             <label class="form-check-label" for="exampleCheck1">Complete</label>
@@ -28,7 +30,7 @@
         </select>
         <br>
         <div class="card-footer">
-            <a href="/post/{{post.id}}" class="btn btn-warning text-white">Save</a>
+            <a href="/{{post.id}}" class="btn btn-warning text-white">Save</a>
 
         </div>
     </div>
