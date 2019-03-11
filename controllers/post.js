@@ -3,7 +3,6 @@ const { Post } = require("../model/index");
 module.exports = {
   index: function(req, res) {
     Post.find({}).then(posts => {
-      console.log(posts);
       res.render("index", { posts });
     });
   },
@@ -44,8 +43,7 @@ module.exports = {
     });
   },
   delete: function(req, res) {
-    Post.remove({ _id: req.params.id }).then(post => {
-      console.log(post);
+    Post.deleteOne({ _id: req.params.id }).then(post => {
       res.redirect("/post");
     });
   }
