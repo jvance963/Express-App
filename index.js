@@ -7,14 +7,6 @@ app.set("view engine", "hbs");
 app.use(parser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
-// // creates the variable "app" global to get methods
-
-// app.get("/", (request, response) => {
-//   response.render("Hello World");
-// });
-
-// Getting URL from the homepage and request the response and then send the response "Hello World"
-
 app.get("/", (req, res) => {
   res.render("index");
 });

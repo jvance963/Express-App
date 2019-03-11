@@ -1,10 +1,10 @@
 <div class="card">
     <div class="card-body">
-        <p>Name: {{post.body.name}}</p>
-        <p>Description: {{post.body.description}}</p>
-        <p>Status: {{post.body.status}}</p>
-        <p>Priority: {{post.body.priority}}</p>
-        <p>Special Instructions: {{post.body.specialInstructions}}</p>
+        <p>Name: {{post.name}}</p>
+        <p>Description: {{post.description}}</p>
+        <p>Status: {{post.status}}</p>
+        <p>Priority: {{post.priority}}</p>
+        <p>Special Instructions: {{post.instructions}}</p>
     </div>
     <div class="card-footer">
         <a href="/post/{{post.id}}/edit" class="btn btn-warning text-white">Edit</a>
@@ -12,7 +12,7 @@
         <form action="/post/{{post.id}}?_method=DELETE" method="post" class="d-inline">
             <input type="submit" value="Delete" class="btn btn-danger">
 
-            <a href="/response/{{post.id}}" class="btn btn-success text-white">Response</a>
+            <a href="/response/{{post.id}}" class="btn btn-success text-white">Response {{post.response}}</a>
 
         </form>
     </div>
