@@ -1,19 +1,20 @@
 <section class="form-container">
     <h4>New Hand eJob</h4>
 
-    <form action="/post" method="put" class="job-form">
+    <form action="/post" method="post" class="job-form">
         <div class="form-group">
-            <label for="Job Name">Job Name</label>
-            <input type="text" class="form-control" id="Job Name" placeholder="Job Name...">
+            <label for="name">Job Name</label>
+            <textarea class="form-control" id="name" name="name" cols="20" rows="1"
+                placeholder="Name your Hand eJob"></textarea>
         </div>
         <div class="form-group">
             <label for="description">Description</label>
-            <textarea class="form-control" id="Description" name="description" cols="20" rows="2"
+            <textarea class="form-control" id="description" name="description" cols="20" rows="2"
                 placeholder="Tell Us About Your Job..."></textarea>
         </div>
         <div class="form-group">
-            <label for="exampleFormControlSelect1">Job Status</label>
-            <select class="form-control" id="exampleFormControlSelect1">
+            <label for="status">Job Status</label>
+            <select class="form-control" id="status">
                 <option></option>
                 <option>In Progress</option>
                 <option>Incomplete</option>
@@ -21,8 +22,8 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="exampleFormControlSelect1">Priority Level</label>
-            <select class="form-control" id="exampleFormControlSelect1">
+            <label for="priority">Priority Level</label>
+            <select class="form-control" id="priority">
                 <option></option>
                 <option>1</option>
                 <option>2</option>
@@ -30,8 +31,9 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="Instructions">Special Instructions</label>
-            <input type="text" class="form-control" id="Instructions" placeholder="Special Instructions...">
+            <label for="instructions">Special Instructions</label>
+            <textarea class="form-control" id="instructions" name="instructions" cols="20" rows="1"
+                placeholder="Special Instructions....."></textarea>
         </div>
         <div>
             <p class="form-group">
