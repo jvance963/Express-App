@@ -1,4 +1,4 @@
-const { Post } = require("../model/index");
+const { Post, Response } = require("../model/index");
 
 module.exports = {
   index: function(req, res) {
@@ -22,8 +22,15 @@ module.exports = {
     });
   },
   show: function(req, res) {
-    Post.findById(req.params.id).then(post => {
-      res.render("post/show", { post });
+    let postId = req.params.id;
+    Post.findById(postId).then(post => {
+      // console.log(post);
+
+      Response.find({ postId }).then(responses => {
+        // console.log(responses);
+
+        res.render("post/show", { post, responses });
+      });
     });
   },
   edit: function(req, res) {

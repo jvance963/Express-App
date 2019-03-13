@@ -1,4 +1,4 @@
-const { Response } = require("../model/index");
+const { Post, Response } = require("../model/index");
 
 module.exports = {
   index: function(req, res) {
@@ -11,18 +11,19 @@ module.exports = {
     res.render("response/new");
   },
   create: function(req, res) {
-    const { response, availability, date, time } = req.body;
-    Response.create({
-      response,
-      availability,
-      date,
-      time
-    }).then(response => {
-      res.redirect(`/response`);
+    const { response, availability, postId, date, time } = req.body;
+
+    let newResponse = new Response({ response, availability, postId });
+    newResponse.save().then(() => {
+      console.log("saved");
+      res.redirect(`/post/` + postId);
     });
   },
   show: function(req, res) {
-    res.render("response/response");
+    let postId = req.params.id;
+    Post.findOne({ _id: postId }).then(post => {
+      res.render("response/response", { post });
+    });
   },
   update: (req, res) => {
     let { content } = req.body;
