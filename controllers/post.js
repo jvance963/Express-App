@@ -24,25 +24,17 @@ module.exports = {
   show: function(req, res) {
     let postId = req.params.id;
     Post.findById(postId).then(post => {
-      // console.log(post);
-
       Response.find({ postId }).then(responses => {
-        // console.log(responses);
-
         res.render("post/show", { post, responses });
       });
     });
   },
   edit: function(req, res) {
     Post.findById(req.params.id).then(post => {
-      // console.log(post);
-
       res.render("post/edit", { post });
     });
   },
   update: function(req, res) {
-    // console.log(req.body);
-
     const editPost = ({
       name,
       description
@@ -50,8 +42,6 @@ module.exports = {
       // priority,
       // instructions
     } = req.body);
-
-    // console.log(req.params.id);
 
     Post.findOneAndUpdate({ _id: req.params.id }, { $set: editPost }).then(
       () => {

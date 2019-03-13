@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-// mongoose.connect("mongodb://localhost/projectexpress");
 if (process.env.NODE_ENV == "production") {
   mongoose.connect(process.env.DB_URL);
 } else {
