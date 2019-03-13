@@ -13,10 +13,9 @@ const PostSchema = new Schema({
     type: String
   },
   priority: {
-    type: String,
-    instructions: String
+    type: String
   },
-  responses: [ResponseSchema]
+  instructions: { type: String }
 });
 
 module.exports = PostSchema;

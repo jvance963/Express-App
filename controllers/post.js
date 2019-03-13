@@ -27,20 +27,30 @@ module.exports = {
     });
   },
   edit: function(req, res) {
-    Post.findById(req.params.id).then(posts => {
-      res.render("post/edit", { posts });
+    Post.findById(req.params.id).then(post => {
+      // console.log(post);
+
+      res.render("post/edit", { post });
     });
   },
   update: function(req, res) {
-    const { name, description, status, priority, instructions } = req.body;
+    // console.log(req.body);
 
-    Post.findOneAndUpdate(req.params.id, {
+    const editPost = ({
       name,
-      description,
-      status,
-      priority,
-      instructions
-    });
+      description
+      // status,
+      // priority,
+      // instructions
+    } = req.body);
+
+    // console.log(req.params.id);
+
+    Post.findOneAndUpdate({ _id: req.params.id }, { $set: editPost }).then(
+      () => {
+        res.redirect("/post");
+      }
+    );
   },
   delete: function(req, res) {
     Post.deleteOne({ _id: req.params.id }).then(post => {
