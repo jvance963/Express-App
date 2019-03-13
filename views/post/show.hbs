@@ -19,9 +19,11 @@
 </div>
 
 <div>
-    {{#each responses}}
-    <div>{{_id}}</div>
-    <div>{{response}}</div>
-    <div>{{availability}}</div>
-    {{/each}}
-</div>
+    <div class="card">
+        <div class="card-body">
+            {{#each responses}}
+            <div>Post Id: {{_id}}</div>
+            <div>Response: {{response}}</div>
+            <div>Availability: {{availability}}</div>
+            {{/each}}
+        </div>
