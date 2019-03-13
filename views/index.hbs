@@ -6,38 +6,32 @@
 <br>
 </form>
 
-{{#if posts }}
-<div class="card-deck">
+<div class="card">
+    {{#if posts }}
     {{#each posts }}
-    <div class="card">
-        <div class="card-body">
-            <p>Name: {{name}}</p>
-            <p>Description: {{description}}</p>
-            <p>Status: {{status}}</p>
-            <p>Priority: {{priority}}</p>
-            <p>Special Instructions: {{instructions}}</p>
-            <div class="card-footer">
-                <a href="/post/{{id}}" class="card-link">View More</a>
-            </div>
+    <div class="card-body">
+        <p>Name: {{name}}</p>
+        <p>Description: {{description}}</p>
+        <p>Status: {{status}}</p>
+        <p>Priority: {{priority}}</p>
+        <p>Special Instructions: {{instructions}}</p>
+        <div class="card-footer">
+            <a href="/post/{{id}}" class="card-link">View More</a>
         </div>
-        <div>
+    </div>
+    <div>
+        <br>
+        {{/each}}
+    </div>
+    {{/if}}
+
+    <form class="">
+        <div class="card-deck mt-5">
             <div class="card">
                 <div class="card-body">
-                    <p>Response: {{Response}}</p>
+                    <a href="/post/new" class="btn btn-success">Add a new Hand eJob</a>
                 </div>
             </div>
-            <br>
-            {{/each}}
         </div>
-        {{/if}}
-
-        <form class="">
-            <div class="card-deck mt-5">
-                <div class="card">
-                    <div class="card-body">
-                        <a href="/post/new" class="btn btn-success">Add a new Hand eJob</a>
-                    </div>
-                </div>
-            </div>
-    </div>
-    </form>
+</div>
+</form>
